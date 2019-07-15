@@ -2,7 +2,10 @@ package com.queue
 import scala.collection.mutable.ListBuffer
 trait Queue{
   def enqueue(x : Int,listBuffer: ListBuffer[Int]):ListBuffer[Int]
-  def dequeue(listBuffer: ListBuffer[Int]):ListBuffer[Int]
+  def dequeue(listBuffer: ListBuffer[Int]):ListBuffer[Int] = {
+    listBuffer.remove(0)
+    listBuffer
+  }
 }
 object Main extends App {
   val list = new  ListBuffer[Int]
