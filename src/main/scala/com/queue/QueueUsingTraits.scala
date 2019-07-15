@@ -5,14 +5,14 @@ trait Queue{
   def dequeue(listBuffer: ListBuffer[Int]):ListBuffer[Int]
 }
 object Main extends App {
-  var list = new  ListBuffer[Int]
-  var obj = new DoubleEnqueue
+  val list = new  ListBuffer[Int]
+  val obj = new DoubleEnqueue
   obj.enqueue(2,list)
   obj.enqueue(3,list)
   obj.enqueue(4,list)
   obj.dequeue(list)
   println(list)
-  var obj2 = new SquareEnqueue
+  val obj2 = new SquareEnqueue
   obj2.enqueue(2,list)
   obj2.enqueue(3,list)
   obj2.dequeue(list)
